@@ -1,23 +1,20 @@
 package com.diaspogift.identityandaccess.domain.model.identity;
 
 public class EmailAddress {
-	
+
 	private String emailAddress;
 
 	public EmailAddress(String anEmailAddress) {
-		
+
 		this.setEmailAddress(anEmailAddress);
-		
+
 	}
 
 	private void setEmailAddress(String anEmailAddress) {
-		///TO DO some validation to go here
-			this.emailAddress = anEmailAddress;
+		this.emailAddress = anEmailAddress;
 	}
-	
-	
-	
-	//Hash and Equal
+
+	// Hash and Equal
 
 	@Override
 	public int hashCode() {
@@ -43,9 +40,5 @@ public class EmailAddress {
 			return false;
 		return true;
 	}
-	
-
-	
-	
 
 }

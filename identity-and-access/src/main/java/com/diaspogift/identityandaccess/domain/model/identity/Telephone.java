@@ -1,26 +1,28 @@
 package com.diaspogift.identityandaccess.domain.model.identity;
 
 public class Telephone {
-	
+
 	private String number;
 
-	public Telephone(String aTelephoneNumber) {
+	public Telephone() {
+		super();
+	}
 
+	public Telephone(String aTelephoneNumber) {
 		this.setNumber(aTelephoneNumber);
 	}
-	
-    public String number() {
-        return this.number;
-    }
 
-    
-    //Internal setters
-    
+	public String number() {
+		return this.number;
+	}
+
+	// Internal setters
+
 	private void setNumber(String number) {
 		this.number = number;
 	}
-	
-	//Equals and Hash
+
+	// Equals and Hash
 
 	@Override
 	public int hashCode() {
@@ -46,10 +48,5 @@ public class Telephone {
 			return false;
 		return true;
 	}
-
-    
-
-    
-	
 
 }

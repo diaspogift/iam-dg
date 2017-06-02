@@ -55,4 +55,10 @@ public class Person {
 		return this.fullName;
 	}
 
+
+
+	public void changeName(FullName aFullName) {
+			this.setFullName(aFullName);
+	}
+
 }

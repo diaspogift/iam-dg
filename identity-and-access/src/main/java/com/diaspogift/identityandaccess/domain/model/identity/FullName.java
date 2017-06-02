@@ -1,20 +1,16 @@
 package com.diaspogift.identityandaccess.domain.model.identity;
 
 public class FullName {
-	
 
 	private String firstName;
 	private String middleName;
 	private String lastName;
-	
-	
 
 	public FullName() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public FullName(String aFirstName, String aMiddleName, String aLastName) {
-		
+
 		this.setFirstName(aFirstName);
 		this.setMiddleName(aMiddleName);
 		this.setLastName(aLastName);
@@ -24,8 +20,7 @@ public class FullName {
 		this.firstName = firstName;
 	}
 
-	
-	/// Internal setters
+	// Internal setters
 
 	private void setMiddleName(String middleName) {
 		this.middleName = middleName;
@@ -44,8 +39,8 @@ public class FullName {
 		result = prime * result + ((middleName == null) ? 0 : middleName.hashCode());
 		return result;
 	}
-	
-	//HashCode and Equals
+
+	// HashCode and Equals
 
 	@Override
 	public boolean equals(Object obj) {
@@ -73,11 +68,5 @@ public class FullName {
 			return false;
 		return true;
 	}
-
-	
-	
-
-
-	
 
 }

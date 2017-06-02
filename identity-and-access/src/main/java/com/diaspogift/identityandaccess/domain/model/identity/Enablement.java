@@ -1,20 +1,17 @@
 package com.diaspogift.identityandaccess.domain.model.identity;
 
-import java.time.LocalDate;
+import java.time.ZonedDateTime;
 
 public class Enablement {
 
 	private boolean enabled;
-	private LocalDate startDate;
-	private LocalDate endDate;
+	private ZonedDateTime startDateTime;
+	private ZonedDateTime endDateTime;
 
-	// Construstors
 	public Enablement() {
 	}
 
-	public Enablement(boolean anEnabled, LocalDate today, LocalDate tomorrow) {
-
-		// To Do: validate state
+	public Enablement(boolean anEnabled, ZonedDateTime today, ZonedDateTime tomorrow) {
 
 		this.setEnabled(anEnabled);
 		this.setStartDate(today);
@@ -22,7 +19,7 @@ public class Enablement {
 	}
 
 	public Enablement(Enablement anEnablement) {
-		this(anEnablement.isEnabled(), anEnablement.startDate(), anEnablement.endDate());
+		this(anEnablement.isEnabled(), anEnablement.startDateTime(), anEnablement.endDateTime());
 	}
 
 	// business logic
@@ -30,24 +27,21 @@ public class Enablement {
 
 		boolean enablementTimeExpire = false;
 
-		if(this.startDate() != null && this.endDate() != null)
-		{
-			LocalDate now = LocalDate.now();
+		if (this.startDateTime() != null && this.endDateTime() != null) {
 
-			if (now.isBefore(this.startDate()) || now.isAfter(this.endDate())) {
+			ZonedDateTime now = ZonedDateTime.now();
+
+			if (now.isBefore(this.startDateTime()) || now.isAfter(this.endDateTime())) {
 
 				enablementTimeExpire = true;
-
 			}
 		}
-
 
 		return enablementTimeExpire;
 
 	}
 
 	public boolean isEnabled() {
-
 		return this.enabled;
 	}
 
@@ -64,12 +58,12 @@ public class Enablement {
 
 	}
 
-	public LocalDate endDate() {
-		return this.endDate;
+	public ZonedDateTime endDateTime() {
+		return this.endDateTime;
 	}
 
-	public LocalDate startDate() {
-		return this.startDate;
+	public ZonedDateTime startDateTime() {
+		return this.startDateTime;
 	}
 
 	// private setters
@@ -77,12 +71,12 @@ public class Enablement {
 		this.enabled = anEnabled;
 	}
 
-	private void setEndDate(LocalDate anEndDate) {
-		this.endDate = anEndDate;
+	private void setEndDate(ZonedDateTime anEndDateTime) {
+		this.endDateTime = anEndDateTime;
 	}
 
-	private void setStartDate(LocalDate aStartDate) {
-		this.startDate = aStartDate;
+	private void setStartDate(ZonedDateTime aStartDateTime) {
+		this.startDateTime = aStartDateTime;
 	}
 
 }

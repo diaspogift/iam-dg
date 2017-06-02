@@ -6,20 +6,19 @@ public class ContactInformation {
 	private PostalAdress postalAdress;
 	private Telephone primaryTelephone;
 	private Telephone secondaryTelephone;
-	
 
 	public ContactInformation(EmailAddress anEmailAddress, PostalAdress aPostalAdress, Telephone aPrimaryTelephone,
 			Telephone aSecondaryTelephone) {
-		
+
 		this.setEmailAddress(anEmailAddress);
 		this.setPostalAdress(aPostalAdress);
-		this.setPrimaryTelephone(aPrimaryTelephone);	
+		this.setPrimaryTelephone(aPrimaryTelephone);
 		this.setSecondaryTelephone(aSecondaryTelephone);
 
 	}
 
 	public ContactInformation() {
-		
+
 		super();
 
 	}
@@ -55,7 +54,5 @@ public class ContactInformation {
 	private void setSecondaryTelephone(Telephone secondaryTelephone) {
 		this.secondaryTelephone = secondaryTelephone;
 	}
-	
-	
 
 }
