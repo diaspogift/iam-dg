@@ -1,7 +1,6 @@
 package com.diaspogift.identityandaccess.domain.model.identity;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Enablement {
 

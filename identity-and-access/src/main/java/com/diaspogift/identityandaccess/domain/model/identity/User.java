@@ -7,18 +7,21 @@ public class User {
 	private ProviderId providerId;
 	private Person person;
 	private String username;
+	
+	
 	private String password;
 	private Enablement enablement;
 	
 	
 	
 	//Might need a factory
-	
-	public User(UserId userId2, ProviderId providerId2, Person person2, String username,  String password, Enablement enablement) {
+	public User(UserId aUserId, ProviderId aProviderId, Person aPerson, String aUsername,  String aPassword, Enablement andEnablement) {
 		
-		this.username = username;
-		this.password = password;
-		this.enablement = enablement;
+		this.setUserId(aUserId);
+		this.setProviderId(aProviderId);
+		this.setPerson(aPerson);
+		this.setPassword(aPassword);
+		this.setEnablement(andEnablement);
 	}
 
 
@@ -57,13 +60,90 @@ public class User {
 
 
 
+	public void changePersonalContactInformation(ContactInformation aContactInformation) {
 
+			this.person().changeContactInformation(aContactInformation);
+			
+	}
+
+
+
+
+
+	public Person person() {
+		return this.person;
+	}
 
 
 
 
 	
 	//private getters and setters
+
+
+	private void setUserId(UserId userId) {
+		this.userId = userId;
+	}
+
+
+
+
+
+	private void setProviderId(ProviderId providerId) {
+		this.providerId = providerId;
+	}
+
+
+
+
+
+	private void setPerson(Person person) {
+		this.person = person;
+	}
+
+
+
+
+
+	private void setUsername(String username) {
+		this.username = username;
+	}
+
+
+
+
+
+	private void setPassword(String password) {
+		this.password = password;
+	}
+
+
+
+
+
+	private void setEnablement(Enablement enablement) {
+		this.enablement = enablement;
+	}
+
+
+
+
+
+	public void changePersonalName(FullName fullName) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+
+
+
+
+
+
+	
 
 
 	
